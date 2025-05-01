@@ -11,9 +11,3 @@ window.addEventListener("scroll", () => {
     nav.classList.remove("active");
   }
 });
-
-gsap.from(".logo img", {
-  opacity: 0,
-  delay: 1,
-  x: 20,
-});
