@@ -3,6 +3,13 @@
   margin: 0;
   padding: 0;
 }
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
 img {
   max-width: 100%;
 }
@@ -675,3 +682,64 @@ aside.containerw .customer-section .customer-section1 .user-container p {
   margin-top: 50px;
 }
 /* Customer Section End*/
+
+footer {
+  background-color: #d8ecd1;
+  min-height: 400px;
+  padding: 10px;
+  color: #1a202c;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer a {
+  color: #1a202c;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.iframes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.iframes a {
+  width: 30px;
+  cursor: pointer;
+}
+footer .container div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  /* justify-content: center; */
+}
+footer p{
+  line-height: 30px;
+}
+footer ul li {
+  line-height: 30px;
+}
+footer .container .logo ,footer .container h1{
+  margin-bottom: 10px;
+  max-width: 200px;
+}
+
+@media screen and (max-width: 700px) {
+  footer .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 500px) {
+  footer .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
