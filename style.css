@@ -29,7 +29,7 @@ img {
   padding: 0 20px;
 }
 .sm-container {
-  max-width: 950px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 .text-xl {
@@ -60,7 +60,7 @@ nav .container ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  width: 600px;
+  width: 700px;
   justify-content: space-between;
   align-items: center;
 }
@@ -168,6 +168,7 @@ header.container {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
+  min-height: 100vh;
   margin-top: 40px;
 }
 header p {
@@ -183,17 +184,32 @@ header .text {
   max-width: 550px;
 }
 header .image {
-  max-width: 500px;
+  width: 1200px;
+  height: 100vh;
+  /* padding-top: 80px; */
+  z-index: -1;
+  position: absolute;
+  right: 0;
+  top: 80px;
   overflow: hidden;
+}
+header .image img {
+  width: 100%;
+  height: 100%;
+  object-position: left top;
+  object-fit: cover;
 }
 header button {
   padding: 16px 20px;
   border-radius: 30px;
   border: 0;
   font-size: 17px;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.1px;
   transition: 0.5s;
   margin-bottom: 30px;
+}
+header button i {
+  padding-left: 10px;
 }
 .black {
   background-color: #000;
@@ -214,7 +230,8 @@ header button:hover {
     max-width: 500px;
   }
   header .image {
-    max-width: 400px;
+    width: 800px;
+    object-fit: cover;
     overflow: hidden;
   }
   header button {
@@ -271,8 +288,8 @@ header button:hover {
     width: 100%;
   }
   header .image {
-    max-width: 100%;
-    width: 100%;
+    width: 0%;
+    display: none;
   }
   header button {
     padding: 16px 30px;
@@ -284,6 +301,9 @@ header button:hover {
     margin-bottom: 30px;
   }
 }
+@media screen and (max-width: 705px) {
+}
+
 /* Header End */
 
 /* Section Start */
@@ -302,6 +322,7 @@ header button:hover {
 .bg-2 .text-align {
   color: #fff;
 }
+
 section.bg {
   margin-top: 90px;
   padding: 30px 0;
@@ -354,10 +375,14 @@ section .sm-container {
   padding: 20px;
 }
 section .sm-container .image {
-  width: 350px;
-  height: 400px;
+  width: 400px;
+  /* height: 400px; */
   overflow: hidden;
-  border-radius: 30px;
+  /* border-radius: 30px; */
+  /* background-color: #fff; */
+}
+section .sm-container .image img {
+  width: 80%;
 }
 section .sm-container .text {
   width: 550px;
@@ -400,7 +425,7 @@ section .sm-container .image img {
   object-fit: cover;
   object-position: center;
 }
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 990px) {
   section .sm-container {
     display: flex;
     flex-wrap: wrap;
@@ -412,6 +437,7 @@ section .sm-container .image img {
   }
   section .sm-container .text {
     width: 400px;
+    order: 1;
   }
 }
 @media screen and (max-width: 600px) {
@@ -430,9 +456,8 @@ section .sm-container .image img {
   }
   section .sm-container .image {
     width: 100%;
-    height: 400px;
     overflow: hidden;
-    border-radius: 30px;
+    /* border-radius: 30px; */
   }
 }
 
@@ -699,21 +724,24 @@ footer a {
 
 footer .container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  padding: 10px 0px;
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
+  margin: 0 auto;
   /* align-items: center; */
   justify-content: center;
 }
 
-.iframes {
+footer .container div.iframes {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  padding: 30px 0px;
   flex-wrap: wrap;
   width: 100%;
 }
 .iframes a {
   width: 30px;
+  display: inline-block;
   cursor: pointer;
 }
 footer .container div {
@@ -722,24 +750,43 @@ footer .container div {
   margin-top: 30px;
   /* justify-content: center; */
 }
-footer p{
-  line-height: 30px;
+footer h1 {
+  font-size: 20px;
+}
+footer p {
+  line-height: 25px;
 }
 footer ul li {
   line-height: 30px;
 }
-footer .container .logo ,footer .container h1{
+footer .container .logo,
+footer .container h1 {
   margin-bottom: 10px;
   max-width: 200px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
+  footer .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 870px) {
+  footer .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 650px) {
   footer .container {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-@media screen and (max-width: 500px) {
-  footer .container {
-    grid-template-columns: repeat(1, 1fr);
-  }
+.red2 {
+  color: #ff0000;
+  font-family: serif;
+  transition: ease-in 1s;
+  text-decoration: underline dotted;
+}
+/* .red2:active, */
+.red2:hover {
+  color: #0000ff;
 }

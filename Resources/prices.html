@@ -16,22 +16,105 @@
           <div></div>
         </div>
         <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="#Services">Services</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about us.html">About Us</a></li>
+
+          <li><a href="../index.html#Services">Services</a></li>
           <li><a href="prices.html" class="active">Pricing</a></li>
-          <li><a href="">Team</a></li>
-          <li><a href="">Testimonials</a></li>
+          <li><a href="about us.html#team">Team</a></li>
+          <li><a href="../index.html#user">Testimonials</a></li>
           <li><a href="">Contact Us</a></li>
         </ul>
       </div>
     </nav>
     <header class="container">
       <div class="f-gr">
-        <h1>Simple</h1>
-        
+        <h1>Payment</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+          repellendus molestiae
+        </p>
+        <h2>0.1775% <sub>+ NGN 13</sub></h2>
+        <ul>
+          <li>Transactions less than NGN 20,000</li>
+        </ul>
+        <button>Start Now</button>
       </div>
-      <div class="s-gr"></div>
+      <div class="f-gr s-gr">
+        <h1>Agency Banking</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+          repellendus molestiae
+        </p>
+        <h2>0.5% <sub>+ NGN 75</sub></h2>
+        <ul>
+          <li>Transactions Above NGN 20,000</li>
+        </ul>
+        <button>Start Now</button>
+      </div>
     </header>
-    <script src="/app.js"></script>
+
+    <footer>
+      <div class="container">
+        <div class="first-div">
+          <div class="logo">
+            <img src="Resources/images/2.png" alt="Moniways-logo" />
+          </div>
+          <p>Banking for everyone</p>
+          <div class="iframes">
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <p>Copyright 2025 Moniways</p>
+        </div>
+        <div class="first-div red">
+          <h1>Links</h1>
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="Resources/about us.html">About Us</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="Resources/prices.html">Pricing</a></li>
+            <li><a href="Resources/about us.html#team">Team</a></li>
+            <li><a href="#user">Testimonials</a></li>
+            <li><a href="">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="first-div">
+          <h1 class="sm">Why Choose Us?</h1>
+          <p>
+            We combine deep fintech expertise with a passion for empowering
+            underserved communities. Our solutions are reliable, fast, and built
+            with security at their core.
+          </p>
+        </div>
+
+        <div class="first-div">
+          <h1>A brief History</h1>
+          <p>
+            Founded in January 2021, Moniways is a proudly African fintech
+            company (RC 1775946) that has grown from just 532 users to over
+            23,982 users
+            <a href="Resources/team.html" class="red2">Learn More</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      let burgerMenu = document.querySelector(".burger");
+      let menu = document.querySelector(" nav .container ul");
+      let nav = document.querySelector("nav");
+      burgerMenu.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > nav.offsetHeight + 450) {
+          nav.classList.add("active");
+        } else {
+          nav.classList.remove("active");
+        }
+      });
+    </script>
   </body>
 </html>
